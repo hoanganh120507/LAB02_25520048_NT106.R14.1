@@ -1,4 +1,4 @@
-﻿namespace LAB01_25520048_NT106.R14._1
+﻿namespace LAB02_25520048_NT106._1
 {
     partial class Bai5
     {
