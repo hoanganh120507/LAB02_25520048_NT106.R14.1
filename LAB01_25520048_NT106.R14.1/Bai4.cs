@@ -144,7 +144,7 @@ namespace LAB02_25520048_NT106._1
                 {
                     foreach (var sv in dsSinhVien)
                     {
-                        sw.WriteLine(\$"{sv.MSSV};{sv.HoTen};{sv.SDT};{sv.Diem1};{sv.Diem2}");
+                        sw.WriteLine($"{sv.MSSV};{sv.HoTen};{sv.SDT};{sv.Diem1};{sv.Diem2}");
                     }
                 }
                 MessageBox.Show("Đã ghi file thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -199,4 +199,37 @@ namespace LAB02_25520048_NT106._1
                 txtHoTen.Text = sv.HoTen;
                 txtSDT.Text = sv.SDT;
                 txtDiem1.Text = sv.Diem1.ToString();
-                txtDiem2.Text = sv.
+                txtDiem2.Text = sv.Diem2.ToString();
+                txtDTB.Text = sv.DTB.ToString("0.00");
+                lblIndex.Text = $"{index + 1}/{dsHienThi.Count}";
+            }
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            if (dsHienThi.Count > 0 && currentIndex > 0)
+            {
+                currentIndex--;
+                HienThiSinhVien(currentIndex);
+            }
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            if (dsHienThi.Count > 0 && currentIndex < dsHienThi.Count - 1)
+            {
+                currentIndex++;
+                HienThiSinhVien(currentIndex);
+            }
+        }
+
+        private void ClearInputs()
+        {
+            txtMSSV.Clear();
+            txtHoTen.Clear();
+            txtSDT.Clear();
+            txtDiem1.Clear();
+            txtDiem2.Clear();
+        }
+    }
+}
