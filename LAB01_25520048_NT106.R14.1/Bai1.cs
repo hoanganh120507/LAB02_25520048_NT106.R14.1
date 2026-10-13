@@ -86,5 +86,10 @@ namespace LAB02_25520048_NT106._1
                 MessageBox.Show("Đã ghi file thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void Bai1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
